@@ -6,6 +6,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 import '../styles/character.scss';
 
 export default function Character({ character }) {
@@ -48,8 +49,11 @@ export default function Character({ character }) {
         )}
       </CardActionArea>
       <CardActions>
-        <Button onClick={learnMoreHandler} size="small" color="primary">
+        <Button onClick={learnMoreHandler} size="small" color="default">
           Learn More
+        </Button>
+        <Button>
+          <FavoriteBorderOutlinedIcon fontSize="small" color="inherit" />
         </Button>
       </CardActions>
     </Card>
