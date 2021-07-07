@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import '../styles/main.scss';
 import Characters from './Characters.jsx';
 
 export default function App() {
@@ -20,8 +21,8 @@ export default function App() {
   }, []);
 
   return (
-    <main role="main">
-      <h1>Rick and Morty Forever</h1>
+    <main id="main" role="main">
+      <h1>Rick Loves Morty</h1>
       <Characters characters={characters} />
     </main>
   );
