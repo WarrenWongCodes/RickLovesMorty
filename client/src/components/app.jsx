@@ -4,22 +4,16 @@ import '../styles/main.scss';
 import Home from './Home.jsx';
 import Favorites from './Favorites.jsx';
 import ScrollBar from './ScrollBar.jsx';
+import NavBar from './NavBar.jsx';
 
 export default function App() {
   return (
     <Router>
-      <main id="main" role="main">
-        <nav>
-          <ul>
-            <li>
-              <Link to={'/'}> Home </Link>
-            </li>
-            <li>
-              <Link to={'/favorites'}>My Favorite Characters</Link>
-            </li>
-          </ul>
-        </nav>
+      <header className="main">
+        <NavBar />
         <h1>Rick Loves Morty</h1>
+      </header>
+      <main className="main" role="main">
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/favorites" component={Favorites} />
