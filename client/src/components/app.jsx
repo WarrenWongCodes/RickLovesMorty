@@ -22,6 +22,11 @@ export default function App() {
       .catch((err) => console.log(err));
   };
 
+  const onPageChange = (e) => {
+    setCurrentPage(Number(e.target.innerText));
+    getAllCharacters();
+  };
+
   useEffect(() => {
     getAllCharacters();
   }, []);
@@ -30,7 +35,10 @@ export default function App() {
     <main id="main" role="main">
       <h1>Rick Loves Morty</h1>
       <Characters characters={characters} />
-      <PaginationLink pagesAvailable={characters.info} />
+      <PaginationLink
+        pageChange={onPageChange}
+        pagesAvailable={characters.info}
+      />
     </main>
   );
 }
