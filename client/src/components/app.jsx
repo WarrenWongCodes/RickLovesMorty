@@ -1,28 +1,28 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import Episodes from './Episodes.jsx';
+import Characters from './Characters.jsx';
 
 export default function App() {
-  const [episodes, setEpisodes] = useState({});
+  const [characters, setCharacters] = useState({});
 
-  const getAllEpisodes = () => {
+  const getAllCharacters = () => {
     axios
-      .get('/episodes')
-      .then((results) => {
-        console.log(results.data);
-        setEpisodes(results.data);
+      .get('/characters')
+      .then(({ data }) => {
+        console.log(data);
+        setCharacters(data);
       })
       .catch((err) => console.log(err));
   };
 
   useEffect(() => {
-    getAllEpisodes();
+    getAllCharacters();
   }, []);
 
   return (
     <main role="main">
       <h1>Rick and Morty Forever</h1>
-      <Episodes episodes={episodes} />
+      <Characters characters={characters} />
     </main>
   );
 }
