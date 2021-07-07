@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import '../styles/main.scss';
 import Characters from './Characters.jsx';
+import PaginationLink from './Pagination.jsx';
 
 export default function App() {
   const [characters, setCharacters] = useState({});
@@ -24,6 +25,7 @@ export default function App() {
     <main id="main" role="main">
       <h1>Rick Loves Morty</h1>
       <Characters characters={characters} />
+      <PaginationLink />
     </main>
   );
 }
