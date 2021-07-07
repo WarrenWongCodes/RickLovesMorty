@@ -28,13 +28,28 @@ export default function Home() {
     getAllCharacters();
   };
 
+  const addToFavorites = (characterInfo) => {
+    const options = {
+      method: 'post',
+      url: '',
+      data: characterInfo,
+    };
+    axios(options)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   useEffect(() => {
     getAllCharacters();
   }, []);
 
   return (
     <>
-      <Characters characters={characters} />
+      <Characters addFavorite={addToFavorites} characters={characters} />
       <PaginationLink
         pageChange={onPageChange}
         pagesAvailable={characters.info}

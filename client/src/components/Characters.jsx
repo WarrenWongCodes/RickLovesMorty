@@ -2,12 +2,16 @@ import React from 'react';
 import Character from './Character.jsx';
 import '../styles/characters.scss';
 
-export default function Characters({ characters }) {
+export default function Characters({ characters, addFavorite }) {
   return (
     <section id="characterCards">
       {characters.results
         ? characters.results.map((character, i) => (
-            <Character key={i} character={character}></Character>
+            <Character
+              key={i}
+              addFavorite={addFavorite}
+              character={character}
+            ></Character>
           ))
         : null}
     </section>
