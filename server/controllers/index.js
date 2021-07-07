@@ -11,8 +11,9 @@ module.exports = {
     }
   },
   retrieveAllCharacters: async (req, res) => {
+    const pageNum = req.query.pageNum;
     try {
-      const { data } = await getAllCharacters();
+      const { data } = await getAllCharacters(pageNum);
       res.status(200).json(data);
     } catch (err) {
       res.status(400).json(err);

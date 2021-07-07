@@ -6,10 +6,15 @@ import PaginationLink from './Pagination.jsx';
 
 export default function App() {
   const [characters, setCharacters] = useState({});
+  const [currentPage, setCurrentPage] = useState(1);
 
   const getAllCharacters = () => {
     axios
-      .get('/characters')
+      .get('/characters', {
+        params: {
+          pageNum: currentPage,
+        },
+      })
       .then(({ data }) => {
         console.log(data);
         setCharacters(data);
@@ -25,7 +30,7 @@ export default function App() {
     <main id="main" role="main">
       <h1>Rick Loves Morty</h1>
       <Characters characters={characters} />
-      <PaginationLink />
+      <PaginationLink pagesAvailable={characters.info} />
     </main>
   );
 }
