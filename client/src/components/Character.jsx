@@ -52,7 +52,7 @@ export default function Character({ character, addFavorite }) {
         <Button onClick={learnMoreHandler} size="small" color="default">
           Learn More
         </Button>
-        <Button>
+        <Button aria-label="add to favorites">
           <FavoriteBorderOutlinedIcon
             onClick={() => addFavorite(character)}
             fontSize="small"
