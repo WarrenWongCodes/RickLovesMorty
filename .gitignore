@@ -15,6 +15,7 @@ ehthumbs.db
 Thumbs.db
 
 .env
-public/
+public/bundle.js
 .vscode
 config.js
+bundle.js.LICENSE.txt
