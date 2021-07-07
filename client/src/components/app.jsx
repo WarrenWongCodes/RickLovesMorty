@@ -1,44 +1,29 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import '../styles/main.scss';
-import Characters from './Characters.jsx';
-import PaginationLink from './Pagination.jsx';
+import Home from './Home.jsx';
+import Favorites from './Favorites.jsx';
 
 export default function App() {
-  const [characters, setCharacters] = useState({});
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const getAllCharacters = () => {
-    axios
-      .get('/characters', {
-        params: {
-          pageNum: currentPage,
-        },
-      })
-      .then(({ data }) => {
-        console.log(data);
-        setCharacters(data);
-      })
-      .catch((err) => console.log(err));
-  };
-
-  const onPageChange = (e) => {
-    setCurrentPage(Number(e.target.innerText));
-    getAllCharacters();
-  };
-
-  useEffect(() => {
-    getAllCharacters();
-  }, []);
-
   return (
-    <main id="main" role="main">
-      <h1>Rick Loves Morty</h1>
-      <Characters characters={characters} />
-      <PaginationLink
-        pageChange={onPageChange}
-        pagesAvailable={characters.info}
-      />
-    </main>
+    <Router>
+      <main id="main" role="main">
+        <nav>
+          <ul>
+            <li>
+              <Link to={'/'}> Home </Link>
+            </li>
+            <li>
+              <Link to={'/favorites'}>My Favorite Characters</Link>
+            </li>
+          </ul>
+        </nav>
+        <h1>Rick Loves Morty</h1>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/favorites" component={Favorites} />
+        </Switch>
+      </main>
+    </Router>
   );
 }
