@@ -7,6 +7,7 @@ const router = require('./routes/index.js');
 
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(express.static(__dirname + '/../public'));
 
 app.use('/', router);
 
