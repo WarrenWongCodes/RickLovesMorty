@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
 import '../styles/character.scss';
 
-export default function Character({ character }) {
+export default function Character({ character, addFavorite }) {
   const [isLearnMoreClicked, setClick] = useState(false);
 
   const learnMoreHandler = () => {
@@ -53,7 +53,11 @@ export default function Character({ character }) {
           Learn More
         </Button>
         <Button>
-          <FavoriteBorderOutlinedIcon fontSize="small" color="inherit" />
+          <FavoriteBorderOutlinedIcon
+            onClick={() => addFavorite(character)}
+            fontSize="small"
+            color="inherit"
+          />
         </Button>
       </CardActions>
     </Card>

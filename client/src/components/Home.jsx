@@ -31,16 +31,12 @@ export default function Home() {
   const addToFavorites = (characterInfo) => {
     const options = {
       method: 'post',
-      url: '',
+      url: '/character',
       data: characterInfo,
     };
     axios(options)
-      .then((result) => {
-        console.log(result);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      .then(({ data }) => console.log(data))
+      .catch((err) => console.log(err));
   };
 
   useEffect(() => {
