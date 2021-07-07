@@ -1,8 +1,14 @@
 const mongoose = require('mongoose');
 
 const characterSchema = new mongoose.Schema({
-  id: Number,
-  name: String,
+  id: {
+    type: Number,
+    unique: true,
+  },
+  name: {
+    type: String,
+    unique: true,
+  },
   status: String,
   species: String,
   type: String,
