@@ -7,7 +7,6 @@ import PaginationLink from './Pagination.jsx';
 export default function Home() {
   const [characters, setCharacters] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
-  const [favoriteCharacters, setFavoriteCharacters] = useState({});
 
   const getAllCharacters = () => {
     axios
@@ -16,10 +15,7 @@ export default function Home() {
           pageNum: currentPage,
         },
       })
-      .then(({ data }) => {
-        console.log(data);
-        setCharacters(data);
-      })
+      .then(({ data }) => setCharacters(data))
       .catch((err) => console.log(err));
   };
 

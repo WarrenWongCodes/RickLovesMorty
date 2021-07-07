@@ -4,7 +4,7 @@ import '../styles/characters.scss';
 
 export default function Characters({ characters, addFavorite }) {
   return (
-    <section id="characterCards">
+    <section className="characterCards">
       {characters.results
         ? characters.results.map((character, i) => (
             <Character
