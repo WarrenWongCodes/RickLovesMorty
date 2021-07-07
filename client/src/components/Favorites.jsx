@@ -15,6 +15,19 @@ export default function Favorites() {
       .catch((err) => console.log(err));
   };
 
+  const deleteFavorite = (name) => {
+    const options = {
+      method: 'delete',
+      url: '/character',
+      data: {
+        name,
+      },
+    };
+    axios(options)
+      .then((result) => getFavorites())
+      .catch((err) => console.log(err));
+  };
+
   useEffect(() => {
     getFavorites();
   }, []);
@@ -22,7 +35,7 @@ export default function Favorites() {
   return (
     <main className="characterCards" role="main">
       {favoriteCharacters.map((character, i) => (
-        <Favorite key={i} character={character} />
+        <Favorite key={i} character={character} del={deleteFavorite} />
       ))}
     </main>
   );

@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import '../styles/character.scss';
 
-export default function Favorite({ character }) {
+export default function Favorite({ character, del }) {
   const [isLearnMoreClicked, setClick] = useState(false);
 
   const learnMoreHandler = () => {
@@ -54,7 +54,7 @@ export default function Favorite({ character }) {
         </Button>
         <Button aria-label="add to favorites">
           <DeleteOutlineIcon
-            // onClick={() => addFavorite(character)}
+            onClick={() => del(character.name)}
             fontSize="small"
             color="inherit"
           />
