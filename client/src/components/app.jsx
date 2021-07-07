@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import Episodes from './Episodes.jsx';
 
-export default function () {
+export default function App() {
   const [episodes, setEpisodes] = useState({});
 
   const getAllEpisodes = () => {
@@ -21,6 +22,7 @@ export default function () {
   return (
     <main role="main">
       <h1>Rick and Morty Forever</h1>
+      <Episodes episodes={episodes} />
     </main>
   );
 }
