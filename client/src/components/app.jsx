@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import '../styles/main.scss';
 import Home from './Home.jsx';
 import Favorites from './Favorites.jsx';
+import ScrollBar from './ScrollBar.jsx';
 
 export default function App() {
   return (
@@ -24,6 +25,9 @@ export default function App() {
           <Route exact path="/favorites" component={Favorites} />
         </Switch>
       </main>
+      <footer>
+        <ScrollBar />
+      </footer>
     </Router>
   );
 }
