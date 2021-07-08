@@ -10,7 +10,10 @@ export default function NavBar() {
           <Link to={'/'}> Home </Link>
         </li>
         <li>
-          <Link to={'/favorites'}>My Favorite Characters</Link>
+          <Link to={'/characters'}> All Characters </Link>
+        </li>
+        <li>
+          <Link to={'/favorites'}> My Favorite Characters </Link>
         </li>
       </ul>
     </nav>

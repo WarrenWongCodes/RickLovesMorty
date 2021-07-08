@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Characters from './Characters.jsx';
-import Blurb from './Blurb.jsx';
 import SearchBar from './SearchBar.jsx';
 import PaginationLink from './Pagination.jsx';
 
-export default function Home() {
+export default function CharacterPage() {
   const [characters, setCharacters] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
   const [query, setQuery] = useState('');
@@ -61,7 +60,16 @@ export default function Home() {
 
   return (
     <>
-      <Blurb />
+      <SearchBar
+        search={onSearch}
+        click={searchHandler}
+        changeCategory={changeCategory}
+      />
+      <Characters addFavorite={addToFavorites} characters={characters} />
+      <PaginationLink
+        pageChange={onPageChange}
+        pagesAvailable={characters.info}
+      />
     </>
   );
 }
