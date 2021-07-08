@@ -3,7 +3,7 @@ import '../styles/giphy.scss';
 
 export default function Giphy() {
   return (
-    <section style={{ width: '100' }}>
+    <section>
       <div id="giphyContainer">
         <iframe title="Rick and Morty Giphy" aria-hidden="true"></iframe>
       </div>
