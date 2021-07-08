@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const filterCharacters = (category, query) => {
-  console.log(category, query);
+  console.log('=====>', category, query);
   const options = {
     url: `https://rickandmortyapi.com/api/character/?${category}=${query}`,
     method: 'get',

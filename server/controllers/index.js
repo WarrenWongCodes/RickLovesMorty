@@ -110,7 +110,7 @@ module.exports = {
     }
   },
   filterAllCharacters: async (req, res) => {
-    const { category, query } = req.body;
+    const { category, query } = req.query;
     try {
       const { data } = await filterCharacters(category, query);
       res.status(200).json(data);

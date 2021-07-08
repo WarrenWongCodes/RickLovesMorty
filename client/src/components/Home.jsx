@@ -9,6 +9,22 @@ import PaginationLink from './Pagination.jsx';
 export default function Home() {
   const [characters, setCharacters] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
+  const [query, setQuery] = useState('');
+  const [category, setCategory] = useState('name');
+
+  const onSearch = (e) => setQuery(e.target.value);
+
+  const searchHandler = () => {
+    axios
+      .get('/filter', {
+        params: {
+          category: category,
+          query: query,
+        },
+      })
+      .then(({ data }) => setCharacters(data))
+      .catch((err) => console.log(err));
+  };
 
   const getAllCharacters = () => {
     axios
@@ -45,7 +61,7 @@ export default function Home() {
     <>
       <Giphy />
       <Blurb />
-      <SearchBar />
+      <SearchBar search={onSearch} click={searchHandler} />
       <Characters addFavorite={addToFavorites} characters={characters} />
       <PaginationLink
         pageChange={onPageChange}
