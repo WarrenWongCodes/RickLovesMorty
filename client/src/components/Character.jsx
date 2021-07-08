@@ -48,18 +48,20 @@ export default function Character({ character, addFavorite }) {
           />
         )}
       </CardActionArea>
-      <CardActions>
-        <Button onClick={learnMoreHandler} size="small" color="default">
-          Learn More
-        </Button>
-        <Button aria-label="add to favorites">
-          <FavoriteBorderOutlinedIcon
-            onClick={() => addFavorite(character)}
-            fontSize="small"
-            color="inherit"
-          />
-        </Button>
-      </CardActions>
+      <div className="characterBtn">
+        <CardActions>
+          <Button onClick={learnMoreHandler} size="small" color="default">
+            Learn More
+          </Button>
+          <Button aria-label="add to favorites">
+            <FavoriteBorderOutlinedIcon
+              onClick={() => addFavorite(character)}
+              fontSize="small"
+              color="inherit"
+            />
+          </Button>
+        </CardActions>
+      </div>
     </Card>
   );
 }

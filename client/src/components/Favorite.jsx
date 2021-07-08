@@ -48,18 +48,20 @@ export default function Favorite({ character, del }) {
           />
         )}
       </CardActionArea>
-      <CardActions>
-        <Button onClick={learnMoreHandler} size="small" color="default">
-          Learn More
-        </Button>
-        <Button aria-label="add to favorites">
-          <DeleteOutlineIcon
-            onClick={() => del(character.name)}
-            fontSize="small"
-            color="inherit"
-          />
-        </Button>
-      </CardActions>
+      <div className="characterBtn">
+        <CardActions>
+          <Button onClick={learnMoreHandler} size="small" color="default">
+            Learn More
+          </Button>
+          <Button aria-label="add to favorites">
+            <DeleteOutlineIcon
+              onClick={() => del(character.name)}
+              fontSize="small"
+              color="inherit"
+            />
+          </Button>
+        </CardActions>
+      </div>
     </Card>
   );
 }
