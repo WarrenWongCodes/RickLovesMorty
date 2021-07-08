@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const url = 'mongodb://mongo:27017/rickandmorty';
+require('dotenv').config();
+const url = `mongodb://${process.env.DB_CONFIG}/rickandmorty`;
 
 mongoose.connect(url, {
   useNewUrlParser: true,
