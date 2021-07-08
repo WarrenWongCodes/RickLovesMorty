@@ -14,12 +14,14 @@ export default function Home() {
 
   const onSearch = (e) => setQuery(e.target.value);
 
+  const changeCategory = (e) => setCategory(e.target.value);
+
   const searchHandler = () => {
     axios
       .get('/filter', {
         params: {
-          category: category,
-          query: query,
+          category,
+          query,
         },
       })
       .then(({ data }) => setCharacters(data))
@@ -48,6 +50,7 @@ export default function Home() {
       url: '/character',
       data: characterInfo,
     };
+
     axios(options)
       .then(({ data }) => console.log(data))
       .catch((err) => console.log(err));
@@ -55,13 +58,17 @@ export default function Home() {
 
   useEffect(() => {
     getAllCharacters();
-  }, []);
+  }, [currentPage, category]);
 
   return (
     <>
-      <Giphy />
       <Blurb />
-      <SearchBar search={onSearch} click={searchHandler} />
+      <Giphy />
+      <SearchBar
+        search={onSearch}
+        click={searchHandler}
+        changeCategory={changeCategory}
+      />
       <Characters addFavorite={addToFavorites} characters={characters} />
       <PaginationLink
         pageChange={onPageChange}
