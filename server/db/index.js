@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const url = 'mongodb://mongo:27017/rickandmorty';
 
-mongoose.connect('mongodb://localhost:27017/rickandmorty', {
+mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
