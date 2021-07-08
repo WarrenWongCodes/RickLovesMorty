@@ -8,6 +8,6 @@ RUN yarn install
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 4000
 
 RUN ["yarn","start"]
