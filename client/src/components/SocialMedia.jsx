@@ -12,35 +12,40 @@ export default function SocialMedia() {
     <section id="socialMediaFooter">
       <Typography>Binge Watch!</Typography>
       <a role="button" target="_blank" href="https://twitter.com/RickandMorty">
-        <TwitterIcon fontSize="large" />
+        <TwitterIcon fontSize="medium" />
+        Twitter
       </a>
       <a
         role="button"
         target="_blank"
         href="https://www.facebook.com/RickandMorty/"
       >
-        <FacebookIcon fontSize="large" />
+        <FacebookIcon fontSize="medium" />
+        Facebook
       </a>
       <a
         role="button"
         target="_blank"
         href="https://www.instagram.com/rickandmorty/"
       >
-        <InstagramIcon fontSize="large" />
+        <InstagramIcon fontSize="medium" />
+        Instagram
       </a>
       <a
         role="button"
         target="_blank"
         href="https://www.youtube.com/channel/UCgPClNr5VSYC3syrDUIlzLw"
       >
-        <YouTubeIcon fontSize="large" />
+        <YouTubeIcon fontSize="medium" />
+        YouTube
       </a>
       <a
         role="button"
         target="_blank"
         href="https://www.reddit.com/r/rickandmorty/"
       >
-        <RedditIcon fontSize="large" />
+        <RedditIcon fontSize="medium" />
+        Reddit
       </a>
     </section>
   );
