@@ -1,6 +1,10 @@
 const Episodes = require('../models/episodes.js');
 const Character = require('../models/characters.js');
-const { getAllEpisodes, getAllCharacters } = require('../API_Helpers/index.js');
+const {
+  getAllEpisodes,
+  getAllCharacters,
+  filterCharacters,
+} = require('../API_Helpers/index.js');
 
 module.exports = {
   retrieveAllEpisodes: async (req, res) => {
@@ -101,6 +105,15 @@ module.exports = {
     try {
       await Character.findOneAndDelete({ name: req.body.name });
       res.send(200).send('Successfully deleted favorite');
+    } catch (err) {
+      res.send(400).json(err);
+    }
+  },
+  filterAllCharacters: async (req, res) => {
+    const { category, query } = req.body;
+    try {
+      const { data } = await filterCharacters(category, query);
+      res.status(200).json(data);
     } catch (err) {
       res.send(400).json(err);
     }
