@@ -15,6 +15,9 @@ export default function NavBar() {
         <li>
           <Link to={'/favorites'}> My Favorite Characters </Link>
         </li>
+        <li>
+          <Link to={'/about'}> About </Link>
+        </li>
       </ul>
     </nav>
   );

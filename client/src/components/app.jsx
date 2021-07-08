@@ -7,7 +7,8 @@ import CharacterPage from './CharacterPage.jsx';
 import Favorites from './Favorites.jsx';
 import ScrollBar from './ScrollBar.jsx';
 import NavBar from './NavBar.jsx';
-import SocialMedia from './SocialMedia';
+import SocialMedia from './SocialMedia.jsx';
+import About from './About.jsx';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/characters" component={CharacterPage} />
             <Route exact path="/favorites" component={Favorites} />
+            <Route exact path="/about" component={About} />
           </Switch>
         </main>
         <footer className="main">

@@ -1,0 +1,21 @@
+#aboutContainer {
+  text-align: center;
+  margin-top: 40px;
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#contactInfo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+#contactCardContainer {
+  display: flex;
+  justify-content: center;
+}
