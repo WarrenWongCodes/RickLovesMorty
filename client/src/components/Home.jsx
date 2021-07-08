@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Giphy from './Giphy.jsx';
 import Characters from './Characters.jsx';
 import Blurb from './Blurb.jsx';
 import SearchBar from './SearchBar.jsx';
@@ -63,7 +62,6 @@ export default function Home() {
   return (
     <>
       <Blurb />
-      <Giphy />
       <SearchBar
         search={onSearch}
         click={searchHandler}
