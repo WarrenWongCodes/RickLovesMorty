@@ -11,7 +11,6 @@ export default function App() {
     <Router>
       <header className="main">
         <NavBar />
-        <h1>Rick Loves Morty</h1>
       </header>
       <main className="main" role="main">
         <Switch>
