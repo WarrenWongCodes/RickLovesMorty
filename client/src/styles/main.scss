@@ -1,5 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  background-image: url('../../assets/rickandmorty.png');
+  background-size: cover;
+}
+
 .main {
   width: 92%;
   margin: 0 auto;
   max-width: 1400px;
+}
+
+h1 {
+  text-align: center;
+}
+
+header {
+  padding-top: 30px;
 }

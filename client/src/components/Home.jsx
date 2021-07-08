@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../styles/main.scss';
 import Characters from './Characters.jsx';
 import PaginationLink from './Pagination.jsx';
 

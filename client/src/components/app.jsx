@@ -9,19 +9,21 @@ import NavBar from './NavBar.jsx';
 export default function App() {
   return (
     <Router>
-      <header className="main">
-        <NavBar />
-        <h1>Rick Loves Morty</h1>
-      </header>
-      <main className="main" role="main">
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/favorites" component={Favorites} />
-        </Switch>
-      </main>
-      <footer>
-        <ScrollBar />
-      </footer>
+      <div id="container">
+        <header className="main">
+          <NavBar />
+          <h1>Rick Loves Morty</h1>
+        </header>
+        <main className="main" role="main">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/favorites" component={Favorites} />
+          </Switch>
+        </main>
+        <footer>
+          <ScrollBar />
+        </footer>
+      </div>
     </Router>
   );
 }
