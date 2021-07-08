@@ -7,6 +7,7 @@ export default function PaginationLink({ pagesAvailable, pageChange }) {
     <section id="pagination">
       <Pagination
         onChange={(e) => pageChange(e)}
+        color="primary"
         size="large"
         count={pagesAvailable ? pagesAvailable.pages : 0}
         shape="rounded"
