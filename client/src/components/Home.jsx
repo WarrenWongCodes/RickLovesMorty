@@ -3,6 +3,7 @@ import axios from 'axios';
 import Giphy from './Giphy.jsx';
 import Characters from './Characters.jsx';
 import Blurb from './Blurb.jsx';
+import SearchBar from './SearchBar.jsx';
 import PaginationLink from './Pagination.jsx';
 
 export default function Home() {
@@ -44,6 +45,7 @@ export default function Home() {
     <>
       <Giphy />
       <Blurb />
+      <SearchBar />
       <Characters addFavorite={addToFavorites} characters={characters} />
       <PaginationLink
         pageChange={onPageChange}
