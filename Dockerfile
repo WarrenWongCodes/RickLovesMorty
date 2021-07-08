@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 8080
 
-RUN ["npm","start"]
+RUN ["yarn","start"]
