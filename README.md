@@ -69,6 +69,8 @@ npm build
 
 ![Navigation Bar](client/assets/navigation.png 'Search bar feature')
 
+---
+
 ### Search
 
 - The search bar utilizes GET /characters endpoint which can be provided query parameters for the category and the query string. These two query parameters correspond to the Rick and Morty API, allowing for seamless filtering of the 600+ characters available.
@@ -76,6 +78,8 @@ npm build
 - Material-UI was utilized for this feature. Material-UI provides minimalist React components, built utilizing Material Design framework in order for fast and clean web development.
 
 ![Search Bar](client/assets/search.png 'Search bar feature')
+
+---
 
 ### Pagination
 
@@ -85,6 +89,8 @@ npm build
 
 ![Pagination](client/assets/pagination.png 'pagination feature')
 
+---
+
 ### Favorites
 
 - The favorites collection utilizes the POST /character endpoint to add a user's favorite Rick and Morty characters, and persists in a MongoDB database collection.
@@ -92,6 +98,16 @@ npm build
 - Characters can be removed from the collection with the DELETE /character endpoint.
 
 ![favorite characters](client/assets/favorites.png 'favorite characters feature')
+
+---
+
+### Accessibility
+
+- Achieved 100 accessibility through Google Chrome Lighthouse report. Through the use of Material-UI components, adding roles, aria-labels, semantic HTML provides a seamless and web accessible application for users with or without disabilities.
+
+![accessibility report](client/assets/accessibility-report.png 'accessibility report')
+
+---
 
 ## Contributors
 
