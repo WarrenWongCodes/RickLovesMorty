@@ -16,13 +16,13 @@
 
 ## Overview
 
-- 100% accessibility via Google Chrome Lighthouse
-- RESTful endpoints built using Rick and Morty API
-- Character cards implemented using Material-UI and SASS
+- **100% accessibility** via Google Chrome Lighthouse
+- **RESTful endpoints** built using Rick and Morty API
+- Character cards implemented using **Material-UI** and **SASS**
 - Search for your favorite characters, by status, gender, species, name or type
-- Favorite characters persisted with MongoDB
-- Utilize React Router DOM to implement navigation bar, minimizing rendering
-- Implement pagination using Material-UI component and optimized corresponding endpoints with Redis cache
+- Favorite characters persisted with **MongoDB**
+- Utilize **React Router** to implement navigation bar, minimizing rendering
+- Implement **pagination** using Material-UI component and optimized corresponding endpoints with **Redis** cache
 
 ## Installation
 
@@ -73,7 +73,7 @@ npm build
 
 ### Search
 
-- The search bar utilizes GET /characters endpoint which can be provided query parameters for the category and the query string. These two query parameters correspond to the Rick and Morty API, allowing for seamless filtering of the 600+ characters available.
+- The search bar utilizes GET /characters endpoint which can be provided query parameters for the category and the query string. These two query parameters correspond to the Rick and Morty API, allowing for seamless filtering of the **600+** characters available.
 
 - Material-UI was utilized for this feature. Material-UI provides minimalist React components, built utilizing Material Design framework in order for fast and clean web development.
 
