@@ -25,13 +25,11 @@ export default function About() {
         </Typography>
         <Typography fontSize="large">
           &#128104; A full stack application built using React.js, Node.js,
-          Express, Material-UI, SASS, and of course the Rick and Morty API!
-        </Typography>
-        <Typography fontSize="small">
-          Credit goes to the Rick and Morty API found{' '}
+          Express, Material-UI, SASS, and of course the{' '}
           <a href="https://rickandmortyapi.com/" target="_blank">
-            here.
+            Rick and Morty API
           </a>
+          !
         </Typography>
       </div>
       <div id="contactCardContainer">
