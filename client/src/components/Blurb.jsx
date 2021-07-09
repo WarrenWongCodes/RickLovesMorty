@@ -11,8 +11,8 @@ export default function Blurb() {
         fretful grandson Morty Smith
       </Typography>
       <Typography className="blurb" paragraph={true}>
-        Stay up to date on your favorite characters and where they are in the
-        galaxy.
+        &#9989; Stay up to date on your favorite characters and where they are
+        in the galaxy.
       </Typography>
     </section>
   );

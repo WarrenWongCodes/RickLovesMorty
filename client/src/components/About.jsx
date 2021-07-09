@@ -57,7 +57,7 @@ export default function About() {
                 </div>
               ) : (
                 <>
-                  <Typography>Get in touch! </Typography>
+                  <Typography>&#129309; Get in touch! </Typography>
                 </>
               )}
             </CardContent>
@@ -75,7 +75,7 @@ export default function About() {
           <div className="characterBtn">
             <CardActions>
               <Button onClick={learnMoreHandler} size="small" color="default">
-                &#10145; Details
+                &#10145;&#65039; Details
               </Button>
             </CardActions>
           </div>
