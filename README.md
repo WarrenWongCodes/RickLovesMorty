@@ -63,17 +63,33 @@ npm build
 
 ### Navigation Bar
 
+- The navigation bar was built utilizing the React Router. The React Router API allows us to build single page applications with navigation without the need for page refreshing, which dramatically improves user experience and render times.
+
+- The React Router uses the Router and Link components, which prevents page refreshes and allows the user to use the browsers functionality like a forward and back button in order to maintain the correct page view.
+
 ![Navigation Bar](client/assets/navigation.png 'Search bar feature')
 
 ### Search
+
+- The search bar utilizes GET /characters endpoint which can be provided query parameters for the category and the query string. These two query parameters correspond to the Rick and Morty API, allowing for seamless filtering of the 600+ characters available.
+
+- Material-UI was utilized for this feature. Material-UI provides minimalist React components, built utilizing Material Design framework in order for fast and clean web development.
 
 ![Search Bar](client/assets/search.png 'Search bar feature')
 
 ### Pagination
 
+- Utilizing React Hooks to store state of the current page traversed, which serves as the query parameter for my GET /character endpoint.
+
+- Latency was vastly increased with the use of Redis. Redis is a great database caching technology that is optimized for speed using data structures such as hashes and sets. Each page and its corresponding data was stored as a key value pair, after the user's first click on the respective page.
+
 ![Pagination](client/assets/pagination.png 'pagination feature')
 
 ### Favorites
+
+- The favorites collection utilizes the POST /character endpoint to add a user's favorite Rick and Morty characters, and persists in a MongoDB database collection.
+
+- Characters can be removed from the collection with the DELETE /character endpoint.
 
 ![favorite characters](client/assets/favorites.png 'favorite characters feature')
 
