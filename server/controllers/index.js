@@ -4,6 +4,7 @@ const retrieveAllEpisodes = require('./retrieveAllEpisodes.js');
 const retrieveAllCharacters = require('./retrieveAllCharacters.js');
 const addFavoriteCharacter = require('./addFavoriteCharacter.js');
 const getAllFavoriteCharacters = require('./getAllFavoriteCharacters.js');
+const deleteFavoriteCharacter = require('./deleteFavoriteCharacter.js');
 const { filterCharacters } = require('../API_Helpers/index.js');
 
 module.exports = {
@@ -11,14 +12,7 @@ module.exports = {
   retrieveAllCharacters,
   addFavoriteCharacter,
   getAllFavoriteCharacters,
-  deleteFavoriteCharacter: async (req, res) => {
-    try {
-      await Character.findOneAndDelete({ name: req.body.name });
-      res.send(200).send('Successfully deleted favorite');
-    } catch (err) {
-      res.send(400).json(err);
-    }
-  },
+  deleteFavoriteCharacter,
   filterAllCharacters: async (req, res) => {
     const { category, query } = req.query;
     try {
