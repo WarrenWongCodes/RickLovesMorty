@@ -7,10 +7,8 @@ const retrieveAllCharacters = async (req, res) => {
   redisClient.get(`characters?pageNum=${pageNum}`, async (err, characters) => {
     try {
       if (characters !== null) {
-        console.log('cache hit!');
         return res.status(200).json(JSON.parse(characters));
       } else {
-        console.log('cache missed');
         const { data } = await getAllCharacters(pageNum);
         redisClient.setex(
           `characters?pageNum=${pageNum}`,
