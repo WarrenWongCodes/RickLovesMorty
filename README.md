@@ -10,8 +10,8 @@
 - [Overview](#Overview)
 - [Installation](#Installation)
 - [Technologies Used](#Technologies-Used)
-- [Components](#Components)
 - [Routes](#Routes)
+- [Features](#Features)
 - [Contributors](#Contributors)
 
 ## Overview
@@ -58,6 +58,24 @@ npm build
 | GET          | /episodes   | An object containing an info property with count, pages, next, and previous page info and a results property, an array containing all episodes details.   | 200    |
 | POST         | /character  | An object containing character details. Id, name, status, species, type, gender, origin, location, image, episode, url.                                   | 201    |
 | DELETE       | /character  | An object containing a name property matching the character to be deleted.                                                                                | 200    |
+
+## Features
+
+### Navigation Bar
+
+![Navigation Bar](client/assets/navigation.png 'Search bar feature')
+
+### Search
+
+![Search Bar](client/assets/search.png 'Search bar feature')
+
+### Pagination
+
+![Pagination](client/assets/pagination.png 'pagination feature')
+
+### Favorites
+
+![favorite characters](client/assets/favorites.png 'favorite characters feature')
 
 ## Contributors
 
