@@ -20,12 +20,12 @@ export default function About() {
     <>
       <div id="aboutContainer">
         <Typography fontSize="medium" variant="h3">
-          Hi, I'm Warren, a software engineer who enjoys an episode or two of
-          Rick and Morty when I'm not coding or traveling.
+          &#128075; Hi, I'm Warren, a software engineer who enjoys an episode or
+          two of Rick and Morty when I'm not coding or traveling.
         </Typography>
         <Typography fontSize="large">
-          A full stack application built using React.js, Node.js, Express,
-          Material-UI, SASS, and of course the Rick and Morty API!
+          &#128104; A full stack application built using React.js, Node.js,
+          Express, Material-UI, SASS, and of course the Rick and Morty API!
         </Typography>
         <Typography fontSize="small">
           Credit goes to the Rick and Morty API found{' '}
@@ -59,7 +59,7 @@ export default function About() {
                 </div>
               ) : (
                 <>
-                  <Typography>Get in touch!</Typography>
+                  <Typography>Get in touch! </Typography>
                 </>
               )}
             </CardContent>
@@ -77,7 +77,7 @@ export default function About() {
           <div className="characterBtn">
             <CardActions>
               <Button onClick={learnMoreHandler} size="small" color="default">
-                Details
+                &#10145; Details
               </Button>
             </CardActions>
           </div>
