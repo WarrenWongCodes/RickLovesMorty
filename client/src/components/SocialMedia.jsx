@@ -10,7 +10,15 @@ import '../styles/socialMedia.scss';
 export default function SocialMedia() {
   return (
     <section id="socialMediaFooter">
-      <Typography>Binge Watch!</Typography>
+      <Typography>More Rick and Morty!</Typography>
+      <a
+        role="button"
+        target="_blank"
+        href="https://www.youtube.com/channel/UCgPClNr5VSYC3syrDUIlzLw"
+      >
+        <YouTubeIcon fontSize="medium" />
+        YouTube
+      </a>
       <a role="button" target="_blank" href="https://twitter.com/RickandMorty">
         <TwitterIcon fontSize="medium" />
         Twitter
@@ -30,14 +38,6 @@ export default function SocialMedia() {
       >
         <InstagramIcon fontSize="medium" />
         Instagram
-      </a>
-      <a
-        role="button"
-        target="_blank"
-        href="https://www.youtube.com/channel/UCgPClNr5VSYC3syrDUIlzLw"
-      >
-        <YouTubeIcon fontSize="medium" />
-        YouTube
       </a>
       <a
         role="button"
