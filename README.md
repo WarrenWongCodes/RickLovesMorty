@@ -1,4 +1,7 @@
-<h1 align="center" style="font-size: 2.7rem;">Rick Loves Morty</h1>
+<h1 align="center" style="font-size: 2.7rem;">Rick Loves Morty<br><br>
+  <img src="./client/assets/site-overview.gif" width="800" alt="site overview gif">
+  <br>
+</h1>
 
 <h2 align="center" style="font-size: 1.5rem;">A MERN stack passion project utilizing the Rick and Morty API to give die hard fans a place to stay in the know.</h2>
 
