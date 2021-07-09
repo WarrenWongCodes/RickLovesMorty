@@ -19,3 +19,4 @@ public/bundle.js
 .vscode
 config.js
 bundle.js.LICENSE.txt
+dump.rdb
