@@ -3,52 +3,14 @@ const Character = require('../models/characters.js');
 const retrieveAllEpisodes = require('./retrieveAllEpisodes.js');
 const retrieveAllCharacters = require('./retrieveAllCharacters.js');
 const addFavoriteCharacter = require('./addFavoriteCharacter.js');
+const getAllFavoriteCharacters = require('./getAllFavoriteCharacters.js');
 const { filterCharacters } = require('../API_Helpers/index.js');
 
 module.exports = {
   retrieveAllEpisodes,
   retrieveAllCharacters,
   addFavoriteCharacter,
-  getAllFavoriteCharacters: async (req, res) => {
-    try {
-      const response = await Character.find({});
-      res.status(200).json(
-        response.map((character) => {
-          const {
-            id,
-            name,
-            status,
-            species,
-            type,
-            gender,
-            origin,
-            location,
-            image,
-            episode,
-            url,
-            created,
-          } = character;
-
-          return {
-            id,
-            name,
-            status,
-            species,
-            type,
-            gender,
-            origin: JSON.parse(origin),
-            location: JSON.parse(location),
-            image,
-            episode,
-            url,
-            created,
-          };
-        })
-      );
-    } catch (err) {
-      console.log(err);
-    }
-  },
+  getAllFavoriteCharacters,
   deleteFavoriteCharacter: async (req, res) => {
     try {
       await Character.findOneAndDelete({ name: req.body.name });
