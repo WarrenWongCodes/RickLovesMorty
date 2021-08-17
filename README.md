@@ -16,7 +16,7 @@
 
 ## Overview
 
-- **100% accessibility** via Google Chrome Lighthouse
+- **100% accessibility** via Google Chrome **Lighthouse**
 - **RESTful endpoints** built using Rick and Morty API
 - Character cards implemented using **Material-UI** and **SASS**
 - Search for your favorite characters, by status, gender, species, name or type
